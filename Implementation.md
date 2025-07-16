@@ -5,7 +5,7 @@
 3. Fill in the details:
    - **Name**: `server-1`
    - **Amazon Machine Image (AMI)**: Select **Ubuntu Server 22.04 LTS (HVM), SSD Volume Type**
-   - **Instance type**: `t2.micro` (Free Tier eligible)
+   - **Instance type**: `t3.micro` (Free Tier eligible)
    - **Key pair**: Create new or select existing
    - **Network Settings**: Use the custom VPC that you created
        - **Type**: HTTP | **Protocol**: TCP | **Port**: 80 | **Source**: Anywhere (0.0.0.0/0)
@@ -62,7 +62,7 @@ EOF
 ![Pankaj](SS/WebsPage.png)
 
 
-**Similarly create four servers: server-1, server-2, server-3 and server-4 respectively**
+**Similarly create four servers: server-1, server-2 and server-3respectively**
 
 ![Pankaj](SS/AllServer.png)
 
@@ -166,7 +166,7 @@ Click **Create** under Application Load Balancer.
 ### Configure Basic Settings
 
 Fill in the required fields:
-- **Name**: `ALB-Testing`
+- **Name**: `Production-ALB`
 - **Scheme**: `Internet-facing`
 - **IP address type**: `IPv4`
 - **Listener**: `HTTP` on port `80`
@@ -205,7 +205,7 @@ After a few moments, your load balancer will be **provisioned and active**.
 ### Access Your Load Balancer
 
 1. Go to **EC2 → Load Balancers**
-2. Copy the **DNS name** of your ALB (e.g., `http://ALB-testing-2121435907.us-east-1.elb.amazonaws.com`)
+2. Copy the **DNS name** of your ALB (e.g., `http://production-alb-155751862.ap-south-1.elb.amazonaws.com`)
 3. Paste it in your browser:
 
 ![Pankaj](SS/SeeLoad.png)
